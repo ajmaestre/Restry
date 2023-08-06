@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid #101010;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: #181818;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.4em;
+  font-family: Verdana, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+svg {
+  width: 100%;
+  height: inherit;
+  display: block;
+  fill: currentColor;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+form, input, textarea, select, button, label {
+  width: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+div {
+  min-width: inherit;
+}
+
+.container {
+  box-shadow: 1em 1em 1em #a2a2a2;
+  min-width: inherit;
+  width: 75%;
+  height: 80%;
+  margin: 0;
+  padding: 2rem;
+  border: 0.1rem solid #f2f2f2;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 0.3rem;
+}
+
+.header-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.header-form {
+  display: flex;
+  align-items: center;
+  justify-content: "space-between";
+  flex-wrap: "no-wrap";
+  flex-direction: row;
+  min-width: inherit;
+  width: 100%;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+  border: 0 solid #101010;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+}
+.header-form button {
+  min-width: inherit;
+  width: 15rem;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0 solid #101010;
+  box-sizing: border-box;
+  border-radius: 0.3rem;
+  background-color: rgb(6, 212, 61);
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: 0.5s;
+  color: #fff;
+  cursor: pointer;
+}
+.header-form button:hover {
+  background-color: #0CF607;
+}
+.header-form .url-btn {
+  background-color: #eee;
+  color: #777777;
+}
+.header-form .url-btn:hover {
+  background-color: #777777;
+  color: #fff;
+}
+.header-form label {
+  color: #777777;
+  min-width: inherit;
+  width: 80%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: "flex-start";
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  margin-right: 1.5rem;
+}
+.header-form select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: #eee;
+  border-radius: 0.3rem;
+  margin-left: 0.5rem;
+  text-align: center;
+}
+.header-svg {
+  min-width: inherit;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0 solid #101010;
+  box-sizing: border-box;
+  margin-right: 1rem;
+}
+
+.form-group {
+  min-width: inherit;
+  width: 75%;
+  height: 2.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0.15rem solid #bbbbbb;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: "space-between";
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 0.3rem;
+}
+.form-group select {
+  margin: 0;
+  padding: 0;
+  border: 0 solid #101010;
+  box-sizing: border-box;
+  margin-right: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background-color: transparent;
+}
+.form-group select:focus {
+  outline: none;
+}
+.form-group input {
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  border-left: 0.15rem solid #777777;
+}
+.form-group input:focus {
+  border: none;
+  outline: none;
+  border-left: 0.15rem solid #777777;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  border: 0 solid #101010;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.section-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: inherit;
+}
+.section-ul {
+  display: flex;
+  align-items: center;
+  justify-content: "space-between";
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: inherit;
+}
+.section-li {
+  margin: 0.5rem;
+  padding: 0;
+  border: 0 solid #101010;
+  box-sizing: border-box;
+}
+.section-li a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #777777;
+  margin: 0;
+  padding: 0.2rem;
+  border: 0 solid #101010;
+  box-sizing: border-box;
+}
+.section-li .active {
+  color: #181818;
+  border-bottom: 0.2rem solid rgb(6, 212, 61);
+}
+.section-article {
+  width: inherit;
+  margin: 0;
+  padding: 0.5rem;
+  border: 0 solid #101010;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+.section-article .h3 {
+  color: #181818;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.section-article .pre {
+  margin: 0;
+  padding: 0;
+  border: 0 solid #101010;
+  box-sizing: border-box;
+  min-width: inherit;
+  width: 100%;
+  height: 10rem;
+}
+
+.section-response {
+  margin: 0;
+  padding: 0;
+  border: 0 solid #101010;
+  box-sizing: border-box;
+  border-top: 0.15rem solid #eee;
+}
+
+.table {
+  width: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0.15rem solid #e2e2e2;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+}
+.table thead {
+  color: #181818;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.table-td {
+  margin: 0;
+  padding: 0.5rem;
+  border: 0.15rem solid #e2e2e2;
+  box-sizing: border-box;
+}
+.table-td .button {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#httpList {
+  min-width: inherit;
+  width: 5rem;
+  height: 2.5rem;
+}
+
+#urlList {
+  min-width: inherit;
+  width: 2rem;
+  height: 2.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

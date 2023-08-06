@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restry</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <div class="header-div">
+                <form class="header-form">
+                    <div class="header-svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img">
+                            <path
+                                d="M516.564 63.574a458.743 458.743 0 01199.033 45.336c9.5 4.286 
+                                    19.06 9.417 28.53 14.551l-41.535 36.795-62.27-64.165-107.297 
+                                    94.09-63.184-67.587-197.305 175.372L398.86 435.698l-49.315 
+                                    42.763 124.628 137.728-49.318 42.744 178.27 195.903 105.512-95.814 
+                                    91.767 102.68c-18.189 13.691-38.09 27.405-59.698 39.36a456.308 
+                                    456.308 0 01-223.27 58.13C267.327 959.191 64 758.202 64 511 
+                                    63.125 265.468 266.485 63.574 516.564 63.574zm-83.093 
+                                    420.033l108.171-95.814 96.94 106.928-108.194 95.807zm77.038 
+                                    184.784L617.8 571.725l97.792 106.92-108.179 95.818zM356.5 
+                                    301.403l108.137-95.815 96.921 106.925-108.179 
+                                    95.814zm198.124-51.346l80.486-71.85 72.703 79.553-80.487 
+                                    72.703zm143.662 329.349l80.456-71.858 72.703 80.391-80.486 
+                                    71.904zm70.948 161.692l80.487-71.87 72.646 79.559-80.456 
+                                    72.691zm32.892-369.566l53.642-47.909 48.444 53.06-53.639 
+                                    47.89zM732.9 213.273l53.65-48.746 48.477 53.885-53.687 
+                                    47.901zm137.585 316.53l53.642-47.905 49.322 53.04-54.495 
+                                    47.893zM629.06 410.893l80.486-71.858 72.673 79.538-80.452 71.873z" />
+                        </svg>
+                    </div>
+                    <label for="url">https://ajmaestre.github.io/portfolio</label>
+                    <button class="url-btn" name="url">Guardar</button>
+                    <select name="urlList" id="urlList">
+                        <option value="url-0"></option>
+                        <option value="url-1">1</option>
+                        <option value="url-2">1</option>
+                        <option value="url-3">1</option>
+                    </select>
+                </form>
+            </div>
+            <div class="header-div">
+                <form class="header-form">
+                    <div class="form-group">
+                        <select name="httpList" id="httpList">
+                            <option value="method-1">GET</option>
+                            <option value="method-2">POST</option>
+                            <option value="method-3">PUT</option>
+                            <option value="method-4">PATCH</option>
+                            <option value="method-5">PUT</option>
+                        </select>
+                        <input type="text" value="https://ajmaestre.github.io/portfolio">
+                    </div>
+                    <button>Enviar</button>
+                </form>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <section class="section">
+                <nav class="section-nav">
+                    <ul class="section-ul">
+                        <li class="section-li"><a href="#" class="active">Params</a></li>
+                        <li class="section-li"><a href="#">Headers</a></li>
+                        <li class="section-li"><a href="#">Authorization</a></li>
+                        <li class="section-li"><a href="#">Body</a></li>
+                    </ul>
+                </nav>
+                <article class="section-article">
+                    <h3 class="h3">Query Params</h3>
+                    <table class="table">
+                        <thead class="table-tr">
+                            <td class="table-td"></td>
+                            <td class="table-td">
+                                <h4>Key</h4>
+                            </td>
+                            <td class="table-td">
+                                <h4>Value</h4>
+                            </td>
+                            <td class="table-td">
+                                <h4>Description</h4>
+                            </td>
+                            <td class="table-td">
+                                <button class="button">+</button>
+                            </td>
+                        </thead>
+                        <tr class="table-tr">
+                            <td class="table-td"><span>1</span></td>
+                            <td class="table-td">
+                                <p>Key</p>
+                            </td>
+                            <td class="table-td">
+                                <p>Value</p>
+                            </td>
+                            <td class="table-td">
+                                <p>Description</p>
+                            </td>
+                            <td class="table-td">
+                                <button class="button">x</button>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+
+            <section class="section section-response">
+                <nav class="section-nav">
+                    <ul class="section-ul">
+                        <li class="section-li"><a href="#" class="active">Body</a></li>
+                        <li class="section-li"><a href="#">Headers</a></li>
+                        <li class="section-li"><a href="#">Cookies</a></li>
+                    </ul>
+                </nav>
+                <article class="section-article">
+                    <pre class="pre">
+{
+    "response":{
+        "result": "ok",
+        "message": "Mensaje enviado"
+    }
+}
+                    </pre>
+                </article>
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- <footer>
+
+    </footer> -->
+
+</body>
+
+</html>
