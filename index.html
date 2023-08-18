@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restry</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="assets/js/app.js"></script>
 </head>
 
 <body>
 
     <div class="container">
 
-        <header class="header">
-            <div class="header-div">
-                <form class="header-form">
+        <div class="windows">
+
+            <header class="header">
+                <div class="header-div">
                     <div class="header-svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img">
                             <path
@@ -38,102 +42,134 @@
                         </svg>
                     </div>
                     <label for="url">https://ajmaestre.github.io/portfolio</label>
-                    <button class="url-btn" name="url">Guardar</button>
-                    <select name="urlList" id="urlList">
-                        <option value="url-0"></option>
-                        <option value="url-1">1</option>
-                        <option value="url-2">1</option>
-                        <option value="url-3">1</option>
-                    </select>
-                </form>
-            </div>
-            <div class="header-div">
-                <form class="header-form">
-                    <div class="form-group">
-                        <select name="httpList" id="httpList">
-                            <option value="method-1">GET</option>
-                            <option value="method-2">POST</option>
-                            <option value="method-3">PUT</option>
-                            <option value="method-4">PATCH</option>
-                            <option value="method-5">PUT</option>
-                        </select>
-                        <input type="text" value="https://ajmaestre.github.io/portfolio">
-                    </div>
-                    <button>Enviar</button>
-                </form>
-            </div>
-        </header>
+                </div>
+                <div class="header-div">
+                    <form class="header-form">
+                        <div class="form-group">
+                            <select name="httpList" id="httpList">
+                                <div class="option-group">
+                                    <option value="GET">GET</option>
+                                    <option value="POST">POST</option>
+                                    <option value="PUT">PUT</option>
+                                    <option value="PATCH">PATCH</option>
+                                    <option value="DELETE">DELETE</option>
+                                </div>
+                            </select>
+                            <input id="urlBase" type="text" placeholder="https://google.com">
+                        </div>
+                        <button type="button" id="btnSend">Enviar</button>
+                    </form>
+                </div>
+            </header>
+    
+            <main class="main">
+    
+                <section class="section section-params">
+                    <nav class="section-nav">
+                        <ul class="section-ul" id="containerParams">
+                            <li class="section-li"><a id="showParam" class="link-params active">Params</a></li>
+                            <li class="section-li"><a id="showHead" class="link-params">Headers</a></li>
+                            <li class="section-li"><a id="showAuth" class="link-params">Authorization</a></li>
+                            <li class="section-li"><a id="showBody" class="link-params">Body</a></li>
+                        </ul>
+                    </nav>
+                    <article class="section-article show" id="boxshowParam">
+                        <h3 class="h3">Query Params</h3>
+                        <table class="table">
+                            <thead class="table-tr">
+                                <td class="table-td"></td>
+                                <td class="table-td">
+                                    <h4>Key</h4>
+                                </td>
+                                <td class="table-td">
+                                    <h4>Value</h4>
+                                </td>
+                                <td class="table-td">
+                                    <button class="button">+</button>
+                                </td>
+                            </thead>
+                            <tr class="table-tr">
+                                <td class="table-td"><span>1</span></td>
+                                <td class="table-td" id="keys">
+                                    <input type="text" name="key" id="key" class="token" placeholder="Key">
+                                </td>
+                                <td class="table-td" id="values">
+                                    <input type="text" name="value" id="value" class="token" placeholder="Value">
+                                </td>
+                                <td class="table-td">
+                                    <button class="button">x</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+    
+                    <article class="section-article" id="boxshowHead">
+                        <h3 class="h3">Headers</h3>
+                        <form class="form">
+                            
+                            <table class="table">
+                                <thead class="table-tr">
+                                    <td class="table-td"></td>
+                                    <td class="table-td">
+                                        <h4>Key</h4>
+                                    </td>
+                                    <td class="table-td">
+                                        <h4>Value</h4>
+                                    </td>
+                                    <td class="table-td">
+                                        <button class="button">+</button>
+                                    </td>
+                                </thead>
+                                <tr class="table-tr">
+                                    <td class="table-td"><span>1</span></td>
+                                    <td class="table-td" id="listKey">
+                                        <input type="text" name="key" id="KeyId" class="token" placeholder="Key">
+                                    </td>
+                                    <td class="table-td" id="listValue">
+                                        <input type="text" name="value" id="ValueId" class="token" placeholder="Value">
+                                    </td>
+                                    <td class="table-td">
+                                        <button class="button">x</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </article>
+    
+                    <article class="section-article" id="boxshowAuth">
+                        <h3 class="h3">Bearer Token</h3>
+                        <form class="form">
+                            <label for="tkn" class="label token">Token</label>
+                            <input type="text" name="tkn" id="tokenId" class="token" placeholder="Your token">
+                        </form>
+                    </article>
+    
+                    <article class="section-article" id="boxshowBody">
+                        <h3 class="h3">JSON</h3>
+                        <textarea name="body-json" class="body-json" id="bdjson" placeholder='{ "Key": "Value" }'></textarea>
+                    </article>
+    
+                </section>
+    
+                <section class="section section-response">
+                    <nav class="section-nav">
+                        <ul class="section-ul" id="containerResponse">
+                            <li class="section-li"><a id="showBds" class="link-params active">Body</a></li>
+                            <li class="section-li"><a id="showHds" class="link-params">Headers</a></li>
+                        </ul>
+                    </nav>
+                    <article class="section-article show" id="boxshowBds">
+                        <textarea name="body-json" class="body-json" id="bodyRes" placeholder='{ "Key": "Value" }' readonly></textarea>
+                    </article>
+                    <article class="section-article" id="boxshowHds">
+                        <textarea name="header-json" class="body-json" id="headRes" placeholder='{ "Key": "Value" }' readonly></textarea>
+                    </article>
+                </section>
+    
+            </main>    
 
-        <main class="main">
-
-            <section class="section">
-                <nav class="section-nav">
-                    <ul class="section-ul">
-                        <li class="section-li"><a href="#" class="active">Params</a></li>
-                        <li class="section-li"><a href="#">Headers</a></li>
-                        <li class="section-li"><a href="#">Authorization</a></li>
-                        <li class="section-li"><a href="#">Body</a></li>
-                    </ul>
-                </nav>
-                <article class="section-article">
-                    <h3 class="h3">Query Params</h3>
-                    <table class="table">
-                        <thead class="table-tr">
-                            <td class="table-td"></td>
-                            <td class="table-td">
-                                <h4>Key</h4>
-                            </td>
-                            <td class="table-td">
-                                <h4>Value</h4>
-                            </td>
-                            <td class="table-td">
-                                <h4>Description</h4>
-                            </td>
-                            <td class="table-td">
-                                <button class="button">+</button>
-                            </td>
-                        </thead>
-                        <tr class="table-tr">
-                            <td class="table-td"><span>1</span></td>
-                            <td class="table-td">
-                                <p>Key</p>
-                            </td>
-                            <td class="table-td">
-                                <p>Value</p>
-                            </td>
-                            <td class="table-td">
-                                <p>Description</p>
-                            </td>
-                            <td class="table-td">
-                                <button class="button">x</button>
-                            </td>
-                        </tr>
-                    </table>
-                </article>
-            </section>
-
-            <section class="section section-response">
-                <nav class="section-nav">
-                    <ul class="section-ul">
-                        <li class="section-li"><a href="#" class="active">Body</a></li>
-                        <li class="section-li"><a href="#">Headers</a></li>
-                        <li class="section-li"><a href="#">Cookies</a></li>
-                    </ul>
-                </nav>
-                <article class="section-article">
-                    <pre class="pre">
-{
-    "response":{
-        "result": "ok",
-        "message": "Mensaje enviado"
-    }
-}
-                    </pre>
-                </article>
-            </section>
-
-        </main>
-
+        </div>
+        
     </div>
 
 
